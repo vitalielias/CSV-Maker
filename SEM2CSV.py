@@ -5,6 +5,7 @@ import os
 import csv
 import tempfile
 from typing import Dict, Any
+import sys
 
 headFile   = sys.argv[1]
 inputZip   = sys.argv[2]
@@ -60,4 +61,9 @@ def extract_and_write_metadata(conversion_csv, input_path, output_csv):
                             value = value[1]
                         metadata_dict[hyperspy_name] = value if value is not None else 'N/A'
                     writer.writerow(metadata_dict)
-                    
+
+# Local Test
+# extract_and_write_metadata(headFile, inputZip, os.path.join(outputFile, 'locTest.csv'))
+
+# For use on the mapping service
+extract_and_write_metadata(headFile, inputZip, outputFile)

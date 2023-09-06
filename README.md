@@ -10,6 +10,8 @@ The inputs to the script are:
 * a directory or zip file containing the SEM tiff images which one would want to summarize
 * the location of your save file
 
+To use it, simply run `python SEM2CSV.py <path/to/headerFile> <path/to/imgDir> <path/to/outputDir>`. 
+
 ### Limitations
 
 The script currently only works for SEM tiff files. Extensions for LM are ongoing.
